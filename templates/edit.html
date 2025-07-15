@@ -1,0 +1,22 @@
+<!-- edit.html -->
+<div class="modal fade" role="dialog" id="editDrinkModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Edit Drink</h2>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form action="{{ url_for('edit', id=drink[0]) }}" method="POST">
+          <!-- All your form fields here, pre-filled -->
+          <div class="form-group">
+            <label for="drink_name">Name of Drink</label>
+            <input value="{{ drink[1] }}" type="text" class="form-control" id="name_of_drink" name="name_of_drink" required>
+          </div>
+          <!-- Add other fields similarly -->
+          <button type="submit" class="btn btn-primary">Update Drink</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
